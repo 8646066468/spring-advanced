@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testdb
+    username: root
+    password: et5036et!!
+  jpa:
+    hibernate:
+      ddl-auto: update    # 처음 스키마 자동 생성/수정: create / create-drop / update 중 택1
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        show_sql: true
+        format_sql: true
+
+jwt:
+  secret:
+    key: TXlTdXBlclNlY3JldEtleQTXlTdXBlclNlY3JldEtleQTXlTdXBlclNlY3JldEtleQ==
+  expiration: 1800

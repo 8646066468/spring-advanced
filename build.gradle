@@ -33,6 +33,9 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+    //SQL
+    runtimeOnly 'mysql:mysql-connector-java'
+
     // bcrypt
     implementation 'at.favre.lib:bcrypt:0.10.2'
 
