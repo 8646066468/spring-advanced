@@ -33,7 +33,6 @@ public class AuthService {
         if (userRepository.existsByEmail(signupRequest.getEmail())) {
             throw new InvalidRequestException("이미 존재하는 이메일입니다.");
         }
-
         User newUser = new User(
                 signupRequest.getEmail(),
                 encodedPassword,
