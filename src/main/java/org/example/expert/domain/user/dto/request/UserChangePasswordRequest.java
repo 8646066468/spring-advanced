@@ -21,7 +21,7 @@ public class UserChangePasswordRequest {
     @Pattern(regexp=passWord_Patten, message = "비밀번호는 최소 8자 이상, 영문 대문자, 숫자를 포함해야합니다.")
     private String newPassword;
 }
-
+// 기존 시비스에 있던 검증 코드들
 // if (userChangePasswordRequest.getNewPassword().length() < 8 ||
 //        !userChangePasswordRequest.getNewPassword().matches(".*\\d.*") || 숫자가 하나 이상 포함되어있는지
 //        !userChangePasswordRequest.getNewPassword().matches(".*[A-Z].*")) {//영어 알파벳 대문자가 하나 이상 포함 되어있는지
