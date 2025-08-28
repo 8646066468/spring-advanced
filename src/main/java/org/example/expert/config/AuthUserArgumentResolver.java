@@ -7,13 +7,15 @@ import org.example.expert.domain.common.dto.AuthUser;
 import org.example.expert.domain.user.enums.UserRole;
 import org.springframework.core.MethodParameter;
 import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
+@Component
 public class AuthUserArgumentResolver implements HandlerMethodArgumentResolver {
-
+    //supportsParameter= 컨트롤러가 필요로 하는 메서드의 파라미터를 지원하는지 여부를 검사
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
         boolean hasAuthAnnotation = parameter.getParameterAnnotation(Auth.class) != null;
@@ -26,7 +28,7 @@ public class AuthUserArgumentResolver implements HandlerMethodArgumentResolver {
 
         return hasAuthAnnotation;
     }
-
+    // 만약 지원한다면  resolveArgument()메서드를 통해 Object(객체로) 만들어 준다
     @Override
     public Object resolveArgument(
             @Nullable MethodParameter parameter,
