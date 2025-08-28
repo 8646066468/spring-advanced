@@ -11,6 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class webConfig implements WebMvcConfigurer {
     private final AuthUserArgumentResolver resolver;
+
     @Override
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
         // 커스텀 ArgumentResolver를 스프링 MVC에 등록
