@@ -16,11 +16,11 @@ class PasswordEncoderTest {
     @Test
     void matches_메서드가_정상적으로_동작한다() {
         // given
-        String rawPassword = "testPassword";
+        String rawPassword = "testPassword1";
         String encodedPassword = passwordEncoder.encode(rawPassword);
 
         // when
-        boolean matches = passwordEncoder.matches(encodedPassword, rawPassword);
+        boolean matches = passwordEncoder.matches(rawPassword, encodedPassword); //MATCHES의 첫번째 파라미터는 인코딩 되지않은  패스워드가 들어가야됨
 
         // then
         assertTrue(matches);
